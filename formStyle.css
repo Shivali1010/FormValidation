@@ -23,3 +23,89 @@ form {
     box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
 
 }
+
+form h2 {
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+.field {
+    /* background-color: blue; */
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+form input, button, textarea {
+    border: none;
+    outline: none;
+    background: none;
+    margin-top: 0.5rem;
+}
+form input, textarea {
+    border: 1px solid rgba(128, 128, 128, 0.564);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    font-size: 0.9em;  
+}
+form textarea {
+    resize: none;
+}
+form input[type="text"], textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+form input[type="number"] {
+    width: 18%;
+    margin-left: 0.5rem;
+}
+form input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    border: 1px solid rgb(6, 87, 114);
+}
+form div[id] {
+    padding: 0;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    display: flex;    
+    align-items: center;
+    
+}
+form div[id] label {
+    margin-right: 1.5rem; 
+    display: flex;
+    align-items: center;
+  
+}
+form div[id] label input {
+    padding: 0;
+    margin: 0 0.3rem 0 0.5rem;
+}
+
+
+form button {
+    cursor: pointer;
+    background-color: rgb(37, 114, 139);
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-radius: 0.15rem;
+    margin: 2rem 0 0 0;
+        
+}
+
+@media only screen and (max-width: 1300px) {
+    form {
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    form {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    form {
+        width: 60%;
+    }
+}
