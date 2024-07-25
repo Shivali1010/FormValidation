@@ -107,6 +107,17 @@ ageField.addEventListener("input", (evt) => {
 
 });
 
+for(box of checkboxes) {
+    box.addEventListener("change", (evt) => {
+        if(evt.target.checked) {
+            removeWarning("no-hobby");
+        }
+        else if(isSubmit) {
+            createWarning("#hobby-options", "Please select at least one hobby", "no-hobby");
+        }
+    });
+}
+
 function validateCheckbox() {
     let isChecked;
     let final = 0;
@@ -117,6 +128,16 @@ function validateCheckbox() {
     return final;
 }
 
+for(btn of radioBtns) {
+    btn.addEventListener("change", (evt) => {
+        if(evt.target.checked) {
+            removeWarning("no-gender");
+        }
+        // else if(isSubmit) {
+        //     createWarning("#gender-options", "Please select your gender", "no-gender");
+        // }
+    });
+}
 function validateRadio() {
     let selRadio = document.querySelector('input[name="gender"]:checked');
     if(selRadio) {
@@ -124,3 +145,24 @@ function validateRadio() {
     }
     return false;
 }
+
+let isSubmit;
+submit.addEventListener("click", (evt) => {
+   
+    
+    if(!(validateCheckbox() && validateRadio() && nameField.value && addressField.value && ageField.value)) {
+        isSubmit = true;
+        evt.preventDefault();
+
+        if(!nameField.value) createWarning("#name", "Please enter your name", "no-name");
+        
+        if(!addressField.value) createWarning("#address", "Please enter your address", "no-address");
+        
+        if(!validateCheckbox()) createWarning("#hobby-options", "Please select at least one hobby", "no-hobby");
+       
+        if(!validateRadio()) createWarning("#gender-options", "Please select your gender", "no-gender");
+        
+        if(!ageField.value) createWarning("#age", "Please enter your age", "no-age");
+        
+    }
+});
