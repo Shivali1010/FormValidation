@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="formStyle.css">
 </head>
 <body>
+    <form>
+        <h2>Personal Details</h2>
+
+        <label class="field">Name
+            <input id="name" name="" type="text" placeholder="Enter your name" required>
+        </label>
+
+        <label class="field">Address
+            <textarea id="address" name="" rows="3" placeholder="Enter your address here" required></textarea>
+        </label>
+
+        <div class="field">Hobbies
+            <div id="hobby-options">
+                <label><input name="" type="checkbox" class="checkbox">Reading</label>
+                <label><input name="" type="checkbox" class="checkbox">Singing</label>
+                <label><input name="" type="checkbox" class="checkbox">Dancing</label>
+                <label><input name="" type="checkbox" class="checkbox">Drawing</label>
+            </div>
+        </div>
+
+        <div class="field">Gender
+            <div id="gender-options">
+                <label><input name="gender" type="radio">Male</label>
+                <label><input name="gender" type="radio">Female</label>
+                <label><input name="gender" type="radio">Other</label>
+            </div> 
+        </div>
+
+        <label class="field">Age
+            <input id="age" name="" type="number" required>
+        </label>
+
+        <button id="submit-btn">Submit</button>
+    </form>
+
+    <script src="formValidation.js"></script>
     <script src="formScript.js"></script>
 </body>
 </html>
