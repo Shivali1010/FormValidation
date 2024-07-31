@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="formStyle.css">
+</head>
+<body>
+    <form>
+        <h2>Personal Details</h2>
+
+        <label class="field"><span>Name</span>
+            <input id="name" name="" type="text" placeholder="Enter your name" required>
+            <p id="warning-msg"></p>
+        </label>
+
+        <label class="field"><span>Address</span>
+            <textarea id="address" name="" rows="3" placeholder="Enter your address here" required></textarea>
+            <p id="warning-msg"></p>
+        </label>
+
+        <div class="field"><span>Hobbies</span>
+            <div id="hobby-options">
+                <label><input name="hobby" type="checkbox">Drawing</label>
+                <label><input name="hobby" type="checkbox">Reading</label>
+                <label><input name="hobby" type="checkbox">Singing</label>
+                <label><input name="hobby" type="checkbox">Dancing</label>
+            </div>
+            <p id="warning-msg"></p>
+        </div>
+
+        <div class="field"><span>Gender</span>            
+            <div id="gender-options">
+                <label><input name="gender" type="radio">Male</label>
+                <label><input name="gender" type="radio">Female</label>
+                <label><input name="gender" type="radio">Other</label>
+            </div> 
+            <p id="warning-msg"></p>
+        </div>
+
+        <label class="field"><span>Age</span>         
+            <input id="age" name="" type="number" required>
+            <p id="warning-msg"></p>
+        </label>
+
+        <button id="submit-btn">Submit</button>
+    </form>
+
+    <script src="formScript.js"></script>
+</body>
+</html>
