@@ -10,17 +10,17 @@
     <form>
         <h2>Personal Details</h2>
 
-        <label class="field"><span>Name</span>
+        <label class="field"><strong>Name<span>*</span></strong>
             <input id="name" name="" type="text" placeholder="Enter your name" required>
             <p id="name-warning" class="warning-msg"></p>
         </label>
 
-        <label class="field"><span>Address</span>
+        <label class="field"><strong>Address<span>*</span></strong>
             <textarea id="address" name="" rows="3" placeholder="Enter your address here" required></textarea>
             <p id="address-warning" class="warning-msg"></p>
         </label>
 
-        <div class="field"><span>Hobbies</span>
+        <div class="field"><strong>Hobbies<span>*</span></strong>
             <div id="hobby-options">
                 <label><input name="hobby" type="checkbox">Drawing</label>
                 <label><input name="hobby" type="checkbox">Reading</label>
@@ -30,7 +30,7 @@
             <p id="hobby-warning" class="warning-msg"></p>
         </div>
 
-        <div class="field"><span>Gender</span>            
+        <div class="field"><strong>Gender<span>*</span></strong>            
             <div id="gender-options">
                 <label><input name="gender" type="radio">Male</label>
                 <label><input name="gender" type="radio">Female</label>
@@ -39,14 +39,14 @@
             <p id="gender-warning" class="warning-msg"></p>
         </div>
 
-        <label class="field"><span>Age</span>         
+        <label class="field"><strong>Age<span>*</span></strong>         
             <input id="age" name="" type="number" required>
             <p id="age-warning" class="warning-msg"></p>
         </label>
 
         <button id="submit-btn">Submit</button>
     </form>
-
+    
     <script src="formScript.js"></script>
 </body>
 </html>

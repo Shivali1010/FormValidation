@@ -40,9 +40,11 @@ form .field {
     margin-bottom: 1.2rem;
     font-size: 1em;
 }
-form span {
+form strong {
     color: rgb(5, 70, 92);
-    font-weight: bold;
+}
+form strong span {
+    color: red;
 }
 form input, button, textarea {
     border: none;
